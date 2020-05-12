@@ -1,0 +1,217 @@
+.banner-child
+    .img 
+        display: block
+        height: 500px
+        img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+    @media (max-width: 1024.98px)
+        .img
+            height: 300px
+    @media (max-width: 575.98px)
+        .img
+            height: 200px
+.breadcrumb-wrapper
+    background: #f3f3f3
+    position: relative 
+    z-index: 99
+    .breadcrumb
+        padding: 1rem 0
+        display: flex 
+        align-items: center
+        margin: 0
+        li 
+            display: inline-block
+            margin-right: 1rem
+            // &:first-child
+            //     a
+            //         font-size: 0
+            //         position: relative
+            //         &:before
+            //             content: '\e800'
+            //             font-family: 'Linearicons-Free'
+            //             font-size: 1.8rem
+            //             color: white
+            a
+                span
+                    color: #666666!important
+                    font-size: 1.4rem
+                &.active 
+                    span
+                        color: $main-color!important
+            + li
+                &:before
+                    content: '/'
+                    color: $main-color
+                    margin-right: 10px
+//nav 
+.nav-wrap
+    margin-bottom: 3.5rem
+.nav-mobile 
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    height: 4rem 
+    text-align: center
+    text-transform: capitalize
+    background: $main-color 
+    color: #ffffff
+    display: flex 
+    align-items: center
+    justify-content: center
+    display: none
+.nav-sub 
+    list-style: none 
+    display: flex
+    justify-content: center
+    margin-bottom: 3.5rem
+    overflow-x: auto
+    li 
+        &:not(:last-child)
+            margin-right: 3rem
+        a 
+            height: 4rem
+            display: flex 
+            justify-content: center
+            align-items: center
+            min-width: 16rem
+            border: 1px solid #d7d7d7
+            background: $text-color
+            color: $main-color 
+            font-size: 1.6rem 
+            color: #666666
+            white-space: nowrap
+        @media (min-width: 768px)
+            &:hover,&.active 
+                a 
+                    background: $main-color 
+                    border: 1px solid $main-color 
+                    color: #ffffff!important 
+                    transition: .3s ease
+@include respond(tab-port)
+    .nav-wrap
+        position: relative
+    .nav-mobile 
+        display: flex
+    .nav-sub
+        position: absolute
+        top: 4rem
+        width: 100%
+        z-index: 9
+        left: 0
+        flex-direction: column
+        user-select: none
+        // transform: translateY(-100%)
+        transition: all .3s ease-in-out
+        overflow: hidden
+        &.show 
+            transition: all .3s ease-in-out
+            li
+                &:nth-child(1)
+                    transform: translateY(0%)
+                    transition: all .2s ease-in-out
+                &:nth-child(2)
+                    transform: translateY(0%)
+                    transition: all .3s ease-in-out
+                &:nth-child(3)
+                    transform: translateY(0%)
+                    transition: all .4s ease-in-out
+                &:nth-child(4)
+                    transform: translateY(0%)
+                    transition: all .5s ease-in-out
+                &:nth-child(5)
+                    transform: translateY(0%)
+                    transition: all .6s ease-in-out
+                &:nth-child(6)
+                    transform: translateY(0%)
+                    transition: all .7s ease-in-out
+                &:not(:last-child)
+                    a
+                        border-bottom: none
+        li
+            width: 100%
+            &:hover 
+                background: none
+            &.active 
+                a
+                    background: $text-color
+                    border: 1px solid #d7d7d7
+                    color: $main-color!important
+            &:nth-child(1)
+                transform: translateY(-100%)
+                transition: all .3s ease-in-out
+            &:nth-child(2)
+                transform: translateY(-200%)
+                transition: all .3s ease-in-out
+            &:nth-child(3)
+                transform: translateY(-300%)
+                transition: all .3s ease-in-out
+            &:nth-child(4)
+                transform: translateY(-400%)
+                transition: all .3s ease-in-out
+            &:nth-child(5)
+                transform: translateY(-500%)
+                transition: all .3s ease-in-out
+            &:nth-child(6)
+                transform: translateY(-600%)
+                transition: all .3s ease-in-out
+            
+///accodion 
+.tabs-accordion-checker
+    input 
+        position: absolute
+        opacity: 0
+        z-index: -1
+    /* Accordion styles */
+    .tabs 
+        border-radius: 8px
+        overflow: hidden
+        box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5)
+        .tab 
+            width: 100%
+            color: red
+            overflow: hidden
+            &-label 
+                display: flex
+                justify-content: space-between
+                padding: 1em
+                background: #333
+                font-weight: bold
+                cursor: pointer
+                /* Icon */
+                &:hover 
+                    background: darken(#333, 10%)
+                
+                &::after 
+                    content: "\276F"
+                    width: 1em
+                    height: 1em
+                    text-align: center
+                    transition: all .35s
+            &-content 
+                max-height: 0
+                padding: 0 1em
+                color: #333
+                background: red
+                transition: all .35s
+            &-close 
+                display: flex
+                justify-content: flex-end
+                padding: 1em
+                font-size: 0.75em
+                background: #333
+                cursor: pointer
+                &:hover 
+                    background: darken(#333, 10%)
+        // :checked
+        input:checked 
+            + .tab-label 
+                background: darken(#333, 10%)
+                &::after 
+                    transform: rotate(90deg)
+                
+            
+            ~ .tab-content 
+                max-height: 100vh
+                padding: 1em

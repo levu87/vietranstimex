@@ -1,0 +1,19 @@
+section.e-brochure.main-section
+    .container 
+        h2.main-title-dark Truyền thông
+        ul.nav-sub 
+            li.active 
+                a(href="") Thư viện ảnh 
+            li 
+                a(href="") Thư viện video
+        .e-brochure__list 
+            -for(i=0;i<6;i++)
+                .e-brochure__items
+                    .item 
+                        .img 
+                            img(src="./img/brochure-1.png", alt="")  
+                        .caption
+                            li
+                                a.title(href="" title="Brochure 1") Brochure 1
+                            a.download(href="#") 
+                                img(src="./img/download.png", alt="")

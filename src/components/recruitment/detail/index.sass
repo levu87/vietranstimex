@@ -1,0 +1,290 @@
+.recruitment-detail-inner
+    display: flex 
+    @include mr 
+    .recruitment-detail
+        max-width: 75%
+        flex: 0 0 75%
+        padding-left: 1.5rem 
+        padding-right: 4.5rem
+        .heading 
+            margin-bottom: 2rem 
+            border-bottom: 1px solid #d7d7d7
+            >div 
+                display: flex
+                align-items: center 
+                #social-share 
+                    margin-left: auto
+                    border-bottom: none
+                date 
+                    font-size: 1.2rem 
+                    color: #999999
+            .title 
+                font-size: 2.4rem
+                font-weight: bold
+                color: $main-color
+                margin-bottom: 1.5rem
+        .full-content 
+            .table 
+                width: 100% 
+                tr 
+                    td 
+                        padding: 1.5rem 2rem
+                        font-size: 1.8rem
+                        color: #666666
+                        &:nth-child(1)
+                            font-weight: bold
+                            width: 33.33%
+                            color: #333333 
+                            font-size: 1.8rem
+                    &:nth-child(odd)
+                        background: #f3f3f3
+            .content 
+                margin: 3rem 0
+                h4 
+                    font-size: 1.8rem 
+                    color: $main-color 
+                    margin: 2.5rem 0
+                li 
+                    list-style: none
+                    position: relative
+                    font-size: 1.8rem 
+                    color: #333333 
+                    line-height: 1.6
+                    padding-left: 2rem
+                    &:not(:last-child)
+                        margin-bottom: 2rem
+                    &:before
+                        content: "\f142"
+                        display: inline-block
+                        font: normal normal normal 16px/1 Material Design Icons
+                        position: absolute 
+                        top: 5px
+                        color: $main-color
+                        left: 0 
+            #apply-btn 
+                margin-right: 3rem
+            .btn-1 
+                background: none 
+                color: $main-color
+                border: 1px solid $main-color
+    .other-recruitment
+        max-width: 25% 
+        flex:  0 0 25%
+        @include pd
+        .heading 
+            font-size: 2.4rem 
+            color: #333333
+            font-weight: bold
+            position: relative
+            margin-bottom: 4rem
+            &:after 
+                @include after
+                width: 10rem 
+                left: 0
+        &__item 
+            display: flex
+            padding: 2rem 0
+            border-bottom: 1px solid #d7d7d7
+            .caption 
+                padding-left: 1rem
+                date 
+                    display: block 
+                    font-size: 1.2rem 
+                    color: #999999 
+                    margin-bottom: .5rem
+                .title 
+                    font-size: 1.4rem 
+                    color: #333333 
+                    line-height: 1.2
+                    @include line-clamp(2)
+            &:hover 
+                .caption 
+                    .title,date
+                        color: $main-color 
+                        transition: .3s ease
+                        text-shadow: 0 0 .65px $main-color, 0 0 .65px $main-color
+                    
+    @include respond(tab-port)
+        flex-wrap: wrap
+        .other-recruitment,.recruitment-detail
+            flex: 0 0 100% 
+            max-width: 100%
+        .recruitment-detail 
+            margin-bottom: 3rem
+            padding-right: 1.5rem
+
+
+.recruitment-detail-page,.news-detail-page,.product-detail-page
+    .Module-155
+        display: none
+    .banner-child
+        display: none
+    .Module-210,.Module-211
+        display: none
+    .pagination
+        display: none
+    @include respond(tab-land)
+        .toggle-btn
+            .button
+                background: $main-color!important
+                &:after,&:before 
+                    background: $main-color!important
+            &.active 
+                .button
+                    background: transparent!important
+    header 
+        background: #ffffff
+        box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.35)
+        .menu__link,a,em
+            color: #333333!important
+        .menu__item 
+            &:hover,&.active 
+                a 
+                    color: $main-color!important
+                    &:after 
+                        background: $main-color!important
+        .language
+            &:before 
+                color: #333333
+        .searchbutton
+            em 
+                color: #fff!important
+        .logo
+            &--1 
+                display: none
+            &--2 
+                display: block
+    main 
+        padding-top: 96px
+#ungtuyen
+	padding: 44px 30px
+	@media (max-width: 767.9px)
+		padding: 44px 15px
+	.popup-body
+		width: 890px
+		max-width: 100%
+	iframe
+		width: 100%
+		min-height: 600px
+.apply-frm
+	margin: 0
+	>div
+		width: 100%
+	#ctl00_phMain_jobApply_pnlNewComment
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		>.form-group
+			width: 100%
+		.col-left,.col-right
+			flex: 0 0 100%
+			max-width: 100%
+			display: flex
+			flex-wrap: wrap
+			>.form-group
+				margin-bottom: 10px
+			@media (min-width: 576px)
+				margin: 0 -10px
+				>.form-group
+					padding: 0 10px
+			
+	.col-left
+		>.form-group
+			flex: 0 0 100%
+			max-width: 100%
+			@media (min-width: 576px)
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4)
+					flex: 0 0 50%
+					max-width: 50%
+	.col-right
+		>.form-group
+			flex: 0 0 100%
+			max-width: 100%
+
+	h4
+		font-size: 16px
+		font-weight: 600
+		color: $main-color
+		text-transform: uppercase
+		margin-bottom: 20px
+		@media (min-width: 992px)
+			width: 100%
+	.fa-exclamation-triangle
+		top: 50%
+		transform: translateY(-50%)
+		right: 15px
+		color: red
+	.label
+		font-size: 14px
+		font-weight: 400
+		color: #999999
+		margin-bottom: 4px
+		.required
+			color: red
+	input[type="text"], input[type="password"], textarea
+		width: 100%
+		border: 1px solid #e5e5e5
+		color: lighten(black, 20%)
+		font-size: 13px
+		padding: 7px 15px
+		font-family: 'Bai Jamjuree',sans-serif
+		&:focus
+			border-color: $main-color
+	input[type="text"],input[type="password"]
+		height: 50px
+	textarea
+		height: 200px
+	.RadAsyncUpload
+		.ruDropZone
+			display: none
+		.ruFileWrap
+			position: relative
+			display: block
+			height: 50px
+		.ruFileInput, .ruBrowse
+			height: 50px
+			width: 120px
+			height: 50px
+			background: #e5e5e5
+			text-transform: uppercase
+			font-size: 15px
+			display: flex
+			justify-content: center
+			align-items: center
+			border: 0
+		.ruFileInput
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+	.frm-btn
+		margin-top: 20px
+		text-align: left
+		input[type="submit"]
+			height: 40px
+			width: 100%
+			max-width: 180px
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			border-radius: 0
+			background: transparent
+			border: 2px solid $main-color
+			color: $main-color
+			text-transform: uppercase
+            font-weight: bold
+
+
+.form-apply
+	height: 740px!important
+	padding: 0
+	@media (min-width: 623px)
+		height: 420px!important
+	iframe
+		border: 0
+		background: white
+		width: 100%
+		height: 100%

@@ -1,0 +1,119 @@
+.services-detail
+    padding: 6rem 0
+    .heading 
+        padding: 0 8.33% 3rem 
+        .title 
+            font-size: 2.4rem
+            font-weight: bold
+            color: $main-color
+            margin-bottom: 2rem
+    .full-content 
+        display: flex 
+        flex-wrap: wrap 
+        .col-xs-12.col-sm-6.col-lg-6
+            img 
+                height: 25rem 
+                width: 100%
+                object-fit: cover
+            p 
+                height: 11rem
+
+        img 
+            width: 100%
+        p 
+            font-size: 1.8rem
+            padding: 3rem  8.33%
+            line-height: 1.4
+        .list-item 
+            display: flex
+            flex-wrap: wrap
+            @include mr 
+            .item 
+                width: 50%
+                flex: 0 0 50%
+                @include pd
+                margin-bottom: 3rem
+                &__img 
+                    img 
+                        width: 100%
+                &__text 
+                    text-align: justify 
+                    background: #f3f3f3
+                    padding: 2rem
+                    ul
+                        list-style: none 
+                        li 
+                            position: relative
+                            font-size: 1.8rem 
+                            color: #333333 
+                            line-height: 1.6
+                            padding-left: 3rem
+                            &:not(:last-child)
+                                margin-bottom: 2rem
+                            &:before
+                                content: "\f142"
+                                display: inline-block
+                                font: normal normal normal 24px/1 Material Design Icons
+                                position: absolute 
+                                top: 3px
+                                color: $main-color
+                                left: 0 
+                        strong 
+                            margin-right: 1rem
+                @include respond(phone)
+                    width: 100%
+                    flex: 0 0 100%
+.other-services
+    background: #e8f3f9
+    &__slider
+        position: relative
+        .swiper-container 
+            .swiper-slide 
+                .items 
+                    .item
+                        .box-img 
+                            
+                            img 
+                                width: 100% 
+                        .caption 
+                            padding: 2rem 2.5rem
+                            background: $text-color
+                            .title 
+                                font-size: 1.8rem
+                                color: rgb(51, 51, 51)
+                                font-weight: bold
+                                text-transform: uppercase
+                                line-height: 1.2
+                                display: block
+                                margin-bottom: 2.5rem
+                                height: 4.2rem
+                                @include line-clamp(2)
+                        &:hover 
+                            // box-shadow: 0 2px 23px 0 rgba(0,0,0,.2)
+                            // transition: all .3s
+                            .caption 
+                                .title 
+                                    color: $main-color
+                                    transition: all .3s
+        .swiper-nav
+            width: calc(100% + 10rem)
+            @include respond(tab-port)
+                width: 80px
+            .button-prev,.button-next
+                width: 3.5rem
+                height: 3.5rem 
+                display: flex 
+                justify-content: center 
+                align-items: center 
+                border: 1px solid #d7d7d7
+                background: $text-color
+                position: relative
+                em 
+                    color: #666666
+                    display: inherit
+                    &:before
+                        font-size: 2.4rem
+
+                
+            
+                

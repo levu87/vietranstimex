@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'download'
+	- var bodyClass = 'download-page'
+
+block main
+	include ../components/_global/banner-child
+	include ../components/_global/breadcrumb
+	include ../components/download/index

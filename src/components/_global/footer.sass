@@ -1,0 +1,127 @@
+.footer 
+    padding: 6rem 0 3rem
+    background: url('/Data/Sites/1/media/img/bg-footer.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center right
+    .main-footer 
+        padding-bottom: 3rem
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        // -webkit-align-items: baseline
+        // align-items: baseline
+        h3 
+            font-size: 1.8rem
+            color: rgb(51, 51, 51)
+            font-weight: bold
+            text-transform: uppercase
+            line-height: 1.333
+            margin-bottom: 3rem
+        &__info 
+            width: calc(33.33% - 1.5rem)
+            padding-right: 7rem
+            .list 
+                list-style: none 
+                li 
+                    display: flex        
+                    font-size: 16px
+                    color: rgb(102, 102, 102)
+                    line-height: 1.375
+                    &:not(:last-child)
+                        margin-bottom: 1rem
+                    em 
+                        margin-right: 1.5rem
+                        color: rgb(102, 102, 102)
+                    span,a
+                        color: rgb(102, 102, 102)
+        &__menu-wrapper
+            width: calc(41.66% - 1.5rem)
+            .ModuleContent
+                width: 100%
+                display: flex 
+                flex-flow: wrap 
+                margin-top: 2.3rem
+                justify-content: space-between
+        &__menu 
+            width: calc(50% - 1.5rem)
+            &:nth-child(2)
+                h3 
+                    color: transparent
+        &__menu-list 
+            list-style: none 
+        &__menu-item 
+            
+            a
+                font-size: 1.6rem
+                color: rgb(102, 102, 102)
+                line-height: 1.875
+                position: relative
+                padding-left: 2.5rem
+                &:after 
+                    content: '\f142'
+                    display: inline-block
+                    font: normal normal normal 24px/1 Material Design Icons
+                    font-size: 1.6rem 
+                    color: rgb(102, 102, 102)
+                    position: absolute 
+                    left: 0 
+                    top: 3px
+            &:hover 
+                a 
+                    color: $main-color
+                    transition: .3s ease
+                    &:after 
+                        color: $main-color
+        @include respond(tab-land)
+            &__menu-wrapper
+                margin-bottom: 3rem 
+                width: 100%
+            &__info
+                margin-bottom: 3rem
+                width: 100%
+                padding-right: 0
+    .social-icon 
+        margin-top: 2.3rem
+        list-style: none 
+        width: calc(25% -1.5rem)
+        li
+            margin: 0 1rem 1rem 0
+            display: inline-block
+            a 
+                display: block 
+                img 
+                    width: 3.9rem
+                    height: auto
+    @include respond(tab-land)
+        .social-icon 
+            width: 100%
+    .copyright 
+        text-align: center
+        p 
+            font-size: 1.4rem
+            color: rgb(102, 102, 102)
+            line-height: 1.5
+            text-align: center
+            a 
+                color: rgb(102, 102, 102)
+    #back-to-top 
+        position: fixed
+        bottom: 4rem
+        right: 4rem
+        z-index: 99
+        width: 4rem
+        height: 4rem 
+        display: flex 
+        justify-content: center 
+        align-items: center
+        background: #333333
+        visibility: hidden
+        opacity: 0
+        &.show 
+            visibility: visible
+            transition: 1s all 
+            opacity: 1
+
+
+

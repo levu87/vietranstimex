@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'recruitment-detail'
+	- var bodyClass = 'recruitment-detail-page'
+
+block main
+	include ../components/_global/banner-child
+	include ../components/_global/breadcrumb
+	include ../components/recruitment/detail/index

@@ -1,0 +1,177 @@
+.dealer 
+    position: relative
+    &__wrapper 
+        display: flex 
+        flex-wrap: wrap
+        align-items: stretch
+        position: absolute 
+        top: 0 
+        left: 0 
+        bottom: 0 
+        width: 33.33%
+        z-index: 20
+        @media (max-width: 767.98px)
+            width: 100%
+            position: unset
+        .result-wrapper
+            width: 100%
+        .dealer-list
+            width: 100%
+        
+        #list,.list
+            padding: 2rem
+            margin-bottom: 0
+            height: 52.5rem!important
+            border: 1px solid #d7d7d7
+            list-style: none
+            // box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1)
+            overflow-y: auto
+            border-top: none
+            background: #fff
+            > li
+                padding: 2rem
+                cursor: pointer
+                &:not(:last-child)
+                    border-bottom: 1px solid rgba(#999999, 0.5)
+                >div 
+                    strong 
+                        color: $main-color
+                        line-height: 2rem
+                        text-transform: uppercase
+                        font-weight: bold
+                        font-size: 1.8rem
+                        margin-bottom: 1rem
+                    >div 
+                        margin: 0
+                        line-height: 2.4rem
+                        color: #666666
+                        display: flex
+                        position: relative
+                        padding-left: 3rem
+                        &:before 
+                            position: absolute 
+                            content: "\e833"
+                            top: 0 
+                            left: 0
+                            font-family: Linearicons-Free
+                            font-weight: 400
+                            text-transform: none
+                        strong 
+                            display: none!important
+                        span 
+                            display: none 
+                    .distance
+                        display: none
+
+                p
+                    margin: 0
+                    line-height: 2.4rem
+                    color: #666666
+                    display: flex
+                    + p
+                        margin-top: 5px
+                    .lnr
+                        margin-right: 8px
+                    &.name
+                        color: $main-color
+                        line-height: 2rem
+                        text-transform: uppercase
+                        font-weight: bold
+                        font-size: 1.8rem
+                .number 
+                    display: none
+                &.active
+                    background: #d8f5df
+                        
+            @include scrollbar(47rem, 4px, #cccccc, $main-color)
+            @media (max-width: 767.98px)
+                @include scrollbar(auto, 4px, #cccccc, $main-color)
+.chinhanh-system
+    padding: 6rem 0
+    #map 
+        margin-left: 33.33%
+        height: 78rem
+        width: unset!important
+        @media (max-width: 767.98px)
+            width: 100%
+            margin-left: 0
+        #map_canvas
+            height: 100%
+            width: 100%
+        
+    .filtermap
+        background: $main-color
+        padding: 2rem 3rem 2rem 2rem
+        #ddlDistrict
+            border-radius: 0
+            -webkit-border-radius: 0
+            -moz-border-radius: 0
+        #ddlProvince
+            border-radius: 0
+            -webkit-border-radius: 0
+            -moz-border-radius: 0
+        .field.form_desc
+            width: 100% 
+            // padding: 6px 10px
+            // border: 1px solid #86c9a5
+            // border-radius: none
+            // position: relative
+            // &:after 
+            //     content: '\e874'
+            //     font-family: Linearicons-Free
+            //     position: absolute
+            //     top: 10px
+            //     right: 10px
+            //     font-size: 1.1rem
+            //     z-index: 5
+            //     pointer-events: none
+            //     color: #86c9a5
+            select,input[type="text"]
+                width: 100%
+                background: #ffffff
+                outline: none
+                color: #333333
+                font-size: 1.8rem
+                border: none
+                height: 37px
+                position: relative
+            .select
+                width: 100%
+                background: #ffffff
+                border: none
+                height: 37px
+                position: relative
+            label 
+                font-size: 1.8rem 
+                color: #ffffff
+                margin-bottom: 1rem
+            select 
+                font-size: 1.8rem 
+                border: none
+                padding: 8px 15px
+                // -webkit-appearance: none
+            &:not(:last-child)
+                margin-bottom: 1.5rem
+            &:first-child
+                border: none
+                margin-bottom: 2rem
+                input 
+                    border: none 
+                    font-size: 1.8rem
+        .btn-searchmap
+            padding: .4rem 1.5rem 
+            font-size: 1.8rem 
+            color: #fff 
+            border: 1px solid #ffffff
+            background: none
+        .filter-title
+            font-size: 1.8rem 
+            color: #fff 
+            font-weight: bold
+            text-transform: uppercase
+            border: none
+            border-bottom: 1px solid #86c9a5!important
+            margin-bottom: 2rem
+            display: none
+    .hidden-xs-up
+        display: none!important

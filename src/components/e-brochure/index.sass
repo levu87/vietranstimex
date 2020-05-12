@@ -1,0 +1,56 @@
+.e-brochure
+    &__list 
+        display: flex 
+        flex-wrap: wrap 
+        @include mr 
+    &__items 
+        max-width: 25%
+        flex: 0 0 25% 
+        @include pd
+        margin-bottom: 3rem
+        .item 
+            background: #f3f3f3
+            border: 1px solid transparent
+            .img 
+                padding: 3rem 3rem 0
+                img 
+                    width: 100%
+            .caption
+                display: flex 
+                align-items: baseline
+                padding: 2rem
+                li 
+                    display: inline-block
+                    font-size: 0
+                    a
+                        display: inline-block
+                        text-align: center
+                        font: normal 1.8rem Arial
+                        color: #333333
+                        &:before 
+                            display: block
+                            content: attr(title)
+                            font-weight: bold
+                            height: 0
+                            overflow: hidden
+                            visibility: hidden
+                .download 
+                    margin-left: 1rem
+                    em 
+                        color: $main-color 
+        &:hover 
+            .item 
+                border: 1px solid $main-color
+                .caption 
+                    .title 
+                        color: $main-color
+                        font-weight: bold
+                        transition: .2s ease
+        @include respond(tab-port)
+            flex: 0 0 33.33%
+            max-width: 33.33% 
+        @include respond(phone)
+            flex: 0 0 50%
+            max-width: 50%
+        
+

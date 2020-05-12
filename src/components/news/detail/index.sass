@@ -1,0 +1,87 @@
+.news-detail-inner
+    display: flex 
+    @include mr 
+    .news-detail
+        max-width: 75%
+        flex: 0 0 75%
+        padding-left: 1.5rem 
+        padding-right: 4.5rem
+        .heading 
+            margin-bottom: 2rem 
+            border-bottom: 1px solid #d7d7d7
+            >div 
+                display: flex
+                align-items: center 
+                #social-share 
+                    margin-left: auto
+                    border-bottom: none
+                date 
+                    font-size: 1.2rem 
+                    color: #999999
+            .title 
+                font-size: 2.4rem
+                font-weight: bold
+                color: $main-color
+                margin-bottom: 1.5rem
+        .full-content 
+            img 
+                width: 100%
+
+            p 
+                font-size: 1.8rem
+                line-height: 1.4
+                margin-bottom: 2.5rem
+        
+    .other-news
+        max-width: 25% 
+        flex:  0 0 25%
+        @include pd
+        .heading 
+            font-size: 2.4rem 
+            color: #333333
+            font-weight: bold
+            position: relative
+            margin-bottom: 4rem
+            &:after 
+                @include after
+                width: 10rem 
+                left: 0
+        &__item 
+            display: flex
+            padding: 2rem 0
+            border-bottom: 1px solid #d7d7d7
+            .box-img 
+                display: block 
+                max-width: 33.33% 
+                flex: 0 0 33.33%
+                height: 56px
+                img 
+                    width: 100%
+                    height: 100% 
+                    object-fit: cover
+            .caption 
+                padding-left: 1rem
+                date 
+                    display: block 
+                    font-size: 1.2rem 
+                    color: #999999 
+                    margin-bottom: .5rem
+                .title 
+                    font-size: 1.4rem 
+                    color: #333333 
+                    line-height: 1.2
+                    @include line-clamp(2)
+            &:hover 
+                .caption 
+                    .title 
+                        color: $main-color 
+                        transition: .3s ease
+    @include respond(tab-port)
+        flex-wrap: wrap
+        .other-news,.news-detail
+            flex: 0 0 100% 
+            max-width: 100%
+        .news-detail 
+            margin-bottom: 3rem
+            padding-right: 1.5rem
+

@@ -1,0 +1,63 @@
+.news 
+    &__list 
+        display: flex 
+        @include mr
+        flex-wrap: wrap
+    &__items 
+        @include pd
+        flex: 0 0 33.33% 
+        max-width: 33.33% 
+        margin-bottom: 3rem
+        .item 
+            .box-img 
+                display: block 
+                overflow: hidden
+                height: 22.5rem
+                width: 100% 
+                img 
+                    width: 100% 
+                    height: 100%
+                    object-fit: cover
+                    transform: scale(1)
+                    transition: 1s all
+            .caption 
+                padding: 2rem
+                border: 1px solid #d7d7d7 
+                border-top: none
+                date 
+                    color: #999999
+                    line-height: 1.2
+                    font-size: 1.4rem 
+                    display: block
+                    margin-bottom: 1rem
+                .title 
+                    font-size: 1.8rem 
+                    line-height: 1.2
+                    color: #333333 
+                    font-weight: bold 
+                    margin-bottom: 1rem
+                    display: block
+                    @include line-clamp(2)
+                .briefcontent
+                    font-size: 1.6rem 
+                    line-height: 1.2
+                    color: #666666
+                    @include line-clamp(2)
+            &:hover 
+                .box-img 
+                    img 
+                        transform: scale(1.15)
+                .title 
+                    color: $main-color 
+                    transform: .3s all
+        @include respond(tab-port)
+            max-width: 50%
+            flex: 0 0 50%
+        @include respond(phone)
+            max-width: 100%
+            flex: 0 0 100%
+        
+
+
+
+   

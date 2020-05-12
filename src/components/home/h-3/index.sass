@@ -1,0 +1,52 @@
+.home-partners 
+    height: 100vh
+    background-image: url('/Data/Sites/1/media/img/home-bg-3.png')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    display: flex 
+    align-items: center
+    .main-title 
+        position: relative
+        text-align: center
+        &:after 
+            @include after
+            left: 50%
+            transform: translateX(-50%)
+            width: 10rem
+    &__slider 
+        text-align: center
+        width: 100%
+        position: relative
+        .swiper-container 
+            position: relative
+            .swiper-wrapper
+                width: 100%!important
+            .swiper-slide 
+                width: 100%!important
+        .swiper-nav 
+            z-index: 20
+            .button-prev,.button-next
+                cursor: pointer
+                width: 48px
+                height: 48px
+                color: #fff
+                border-radius: 100%
+                em 
+                    font-size: 3rem
+                &:hover 
+                    background-color: rgba(0,0,0,.3)
+                    transition: .3s
+            @include respond(tab-port)
+                width: 100%
+                top: 50%
+                transform: translate(-50%,-50%)
+        .partners 
+            &__list 
+                display: inline-flex 
+                flex-direction: column
+            &__item 
+                display: inline-block
+                color: $text-color
+                line-height: 1.444
+                font-size: 1.8rem

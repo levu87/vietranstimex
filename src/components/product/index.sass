@@ -1,0 +1,60 @@
+.product-2
+    &__list
+        display: flex
+        flex-wrap: wrap
+        @include mr
+    &__items 
+        max-width: 50%
+        flex: 0 0 50% 
+        @include pd
+        margin-bottom: 3rem
+        .item
+            display: flex 
+            align-items: stretch
+            .box-img 
+                width: 50%
+                overflow: hidden
+                img 
+                    width: 100% 
+                    height: 100%
+                    object-fit: cover
+                    transform: scale(1)
+                    transition: all 1s
+            .caption 
+                width: 50%
+                padding: 2.5rem
+                background: #f3f3f3
+                display: flex 
+                flex-direction: column
+                justify-content: space-between
+                .title 
+                    font-size: 1.8rem
+                    color: rgb(51, 51, 51)
+                    font-weight: bold
+                    text-transform: uppercase
+                    line-height: 1.6
+                    display: block
+                    margin-bottom: 2.5rem
+                .view-more-btn 
+                    max-width: 65px
+                    em 
+                        top: 50%
+                        pointer-events: none
+            &:hover 
+                .caption 
+                    background: $main-color
+                    transition: background .3s ease
+                    .title,a,em
+                        color: $text-color
+                        transition: all .1s
+                .box-img 
+                    img
+                        transform: scale(1.15)
+        
+        @include respond(tab-land)
+            max-width: 100%
+            flex: 0 0 100%
+                
+.product-2-page
+    .about-nav__list
+        justify-content: flex-start

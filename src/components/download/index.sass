@@ -1,0 +1,122 @@
+.download-section
+    .table-responsive
+        white-space: nowrap
+        @media (max-width: 1200px)
+            overflow-x: auto
+        .table 
+            width: 100%
+            margin-top: 3rem
+            thead
+                background: $main-color
+                tr 
+                    th
+                        padding: 2rem 3rem
+                        text-align: center
+                        color: #ffffff
+                        font-size: 1.8rem
+                        font-weight: bold
+                        border: 1px solid #eeeeee
+                        border-top: none
+                    .noidung
+                        text-align: left
+                        border: none
+            tbody 
+                tr 
+                    transition: all .4s ease-in-out
+                    &:nth-child(even)
+                        background: #fafafa
+                    &:nth-child(odd)
+                        background: #ffffff
+                    td 
+                        font-size: 1.8rem
+                        padding: 2rem 3rem
+                        text-align: center
+                        border-left: 1px solid #eeeeee
+                        a 
+                            color: #333333
+                    .noidung 
+                        text-align: left
+                    td:last-child
+                        border-right: 1px solid #eeeeee
+                        a
+                            transition: all .4s ease-in-out
+                            em 
+                                &:before 
+                                    font-weight: 900
+                        .icon-download 
+                            position: relative
+                            &:after 
+                                content: url('/Data/Sites/1/media/img/download-1.png')
+                                position: absolute 
+                                top: 50%
+                                left: 50%
+                                transform: translate(-50%,-50%)
+
+                    .title
+                        text-align: left
+                tr
+                    td 
+                        // letter-spacing: 1
+                    &:hover 
+                        color: #1e8ec7
+                        box-shadow: 0 0 5px 0px rgba(204, 204, 204, 0.82)
+                        td 
+                            text-shadow: 0 0 .65px #1e8ec7, 0 0 .65px #1e8ec7
+                        em 
+                            color: #1e8ec7
+                        .icon-download 
+                            &:after 
+                                content: url('/Data/Sites/1/media/img/download.png')!important
+                tr:first-child
+                    border-top: none
+        @media screen and(max-width:767px)
+            .table
+                thead
+                    display: none
+                tbody
+                    tr
+                        border-bottom: 1px solid #e0e0e0!important
+                        position: relative
+                        padding: 1.6rem 0
+                        display: flex
+                        flex-wrap: wrap
+                        height: 100%
+                        border: none
+                        th
+                            flex: 0 0 100%
+                            text-align: left
+                                
+                            &:before
+                                font-size: 2.4rem
+                        td
+                            flex: 0 0 100%
+                            border: none
+                            padding: 0
+                            line-height: 2
+                            &:nth-child(2)
+                                &:before
+                                    display: none
+                                a
+                                    position: absolute
+                                    top: 1.5rem
+                                    left: 5rem
+                                    font-size: 1.8rem
+                                    font-weight: 600
+                                    text-transform: uppercase
+                                    color: $main-color
+                                    white-space: pre-wrap
+                            &:last-child 
+                                padding: 2rem 1rem
+                                        
+                            &:not(:nth-child(1))
+                                text-align: left
+                        td:nth-child(1)
+                            text-align: left
+                            font-weight: 600
+                            font-size: 1.8rem
+                            padding-bottom: 2rem
+                            color: $main-color
+                            &:before
+                                display: none
+                            &:before
+                                content: attr(attribute) ": "

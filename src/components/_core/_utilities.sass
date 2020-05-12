@@ -1,0 +1,156 @@
+
+.clearfix:after
+	clear: both
+	content: ""
+	display: block
+.hidden-mobile
+    @media (max-width: 1024px)
+        display: none
+.hidden-desktop 
+    @media (min-width: 1025px)
+        display: block
+.main-title 
+    font-size: 3.6rem
+    color: rgba(255, 255, 255, 0.902)
+    line-height: 1.2
+    margin-bottom: 5rem
+    font-weight: 400
+.main-title-dark
+    font-size: 3.6rem
+    color: #333333
+    line-height: 1.2
+    margin-bottom: 5rem
+    font-weight: 400
+    position: relative
+    text-align: center
+    &:after
+        position: absolute 
+        content: ''
+        background: #208dc5 
+        height: 2px
+        bottom: -1.5rem
+        width: 10rem 
+        left: 50%
+        transform: translateX(-50%)
+.btn-1
+    display: inline-flex
+    padding: 1rem 3rem 
+    font-size: 1.6rem
+    align-items: center
+    color: #ffffff
+    background: rgba(0,0,0,.7)
+    position: relative
+    z-index: 1
+    cursor: pointer
+    img 
+        max-height: 1.5rem 
+        width: auto
+        display: block
+        margin-left: 1.5rem
+        position: relative
+        z-index: 1
+    &:after 
+        position: absolute 
+        content: ''
+        width: 0%
+        height: 100% 
+        background: #208dc5 
+        left: 0 
+        top: 0
+        z-index: -1
+    &:hover 
+        color: #ffffff!important
+        transition: .3s all
+        &:after 
+            width: 100%
+            transition: .3s all
+
+
+.m-0
+    margin: 0 
+.p-0
+    padding: 0
+.swiper-nav
+    position: absolute 
+    top: 50% 
+    transform: translate(-50%,-50%)
+    z-index:
+    left: 50%
+    display: flex 
+    width: 100%
+    .button-next 
+        margin-left: auto
+        // transform: translateX(6rem)
+    .button-prev 
+        // transform: translateX(-6rem)
+    .button-next,.button-prev 
+        width: 4rem 
+        height: 4rem 
+        display: flex 
+        justify-content: center 
+        align-items: center 
+        color: #ffffff
+        font-size: 4.8rem
+        outline: none
+    @media (max-width: 767.98px)
+        top: calc(100% + 2rem)
+        transform: translate(-50%,0%)
+        width: 80px
+        .button-next,.button-prev 
+            transform: unset
+
+.sub-title
+    font-size: 1.8rem
+    color: rgba(255, 255, 255, 0.902)
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 1.2
+    margin-bottom: 5rem
+    position: relative
+.view-more-btn 
+    font-size: 1.4rem 
+    color: #208dc5
+    position: relative
+    em 
+        color: #208dc5
+        font-size: 1.6rem
+        top: 50%
+        transform: translateY(-50%)
+        right: -2rem
+        position: absolute
+    &:hover 
+        color:  #208dc5
+        em 
+            right: -3rem
+            transition: .2s ease
+.main-section
+    padding: 6rem 0
+#social-share 
+    padding-bottom: 2rem 
+    border-bottom: 1px solid #d7d7d7
+    .jssocials-share-link 
+        width: 3rem
+        height: 1.5rem
+        border-radius: .2rem
+        position: relative
+    .jssocials-share-logo
+        font-size: unset
+    .jssocials-share-twitter
+        i 
+            position: absolute
+            top: 50%
+            transform: translate(-50%,-60%)
+            left: 50%
+            &:before 
+                content: '\f099'
+                font-family: "Font Awesome 5 Brands"
+                font-size: 1rem
+    .jssocials-share-facebook
+        i 
+            position: absolute
+            top: 50%
+            transform: translate(-50%,-60%)
+            left: 50%
+            &:before 
+                content: '\f20c'
+                font: normal normal normal 11px/1 Material Design Icons

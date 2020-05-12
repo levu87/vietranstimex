@@ -1,0 +1,22 @@
+section.home-product.section(data-anchor="section-5")
+    .container 
+        h2.main-title Sản Phẩm
+        .home-product__slider 
+            .swiper-container 
+                .swiper-wrapper 
+                    .swiper-slide 
+                        .product 
+                            .product__list 
+                                -for(i=0; i<11; i++)
+                                    a.product__item(href="") Alstom
+                    .swiper-slide
+                        .product 
+                            .product__list 
+                                -for(i=0; i<11; i++)
+                                    a.product__item(href="") Alstom
+                        
+            .swiper-nav
+                .button-prev
+                    em.lnr.lnr-chevron-left
+                .button-next
+                    em.lnr.lnr-chevron-right

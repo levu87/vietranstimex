@@ -1,0 +1,67 @@
+.projects-2
+    &__list
+        display: flex
+        flex-wrap: wrap
+        @include mr
+    &__items 
+        max-width: 33.33%
+        flex: 0 0 33.33% 
+        @include pd
+        margin-bottom: 3rem
+        .item
+            .box-img 
+                
+                img 
+                    width: 100% 
+            .caption 
+                padding: 2rem 2.5rem
+                background: #f3f3f3
+                .title 
+                    font-size: 1.8rem
+                    color: rgb(51, 51, 51)
+                    font-weight: bold
+                    text-transform: uppercase
+                    line-height: 1.2
+                    display: block
+                    margin-bottom: 2.5rem
+            &:hover 
+                box-shadow: 0 2px 23px 0 rgba(0,0,0,.2)
+                transition: all .3s
+                .caption 
+                    .title 
+                        color: $main-color
+                        transition: all .3s
+        &:first-child 
+            max-width: 100%
+            flex: 0 0 100%
+            .item
+                display: flex
+                .box-img 
+                    width: 50%
+                .caption 
+                    width: 50%
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    padding: 3rem 5rem
+                    p 
+                        font-size: 1.6rem 
+                        color: #333333 
+                        line-height: 1.4
+                .view-more-btn 
+                    position: relative
+                    em 
+                        top: 50%
+        @include respond(tab-land)
+            .item:first-child
+                .caption 
+                    padding: 1.5rem 3rem
+        @include respond(tab-port)
+            max-width: 50%
+            flex: 0 0 50%
+            .item:first-child
+                flex-wrap: wrap
+                .caption 
+                    width: 100%
+                .box-img 
+                    width: 100%

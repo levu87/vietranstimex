@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'project-2'
+	- var bodyClass = 'project-2-page'
+
+block main
+	include ../components/_global/banner-child
+	include ../components/_global/breadcrumb
+	include ../components/projects-2/index

@@ -1,0 +1,36 @@
+.projects 
+    &__item 
+        display: flex 
+        align-items: stretch 
+        .item-img 
+            max-width: 50%
+            img 
+                width: 100% 
+                height: 100%
+                object-fit: cover
+        .item-content 
+            max-width: 50%
+            background: #f3f3f3 
+            padding: 7rem 5rem
+            .title 
+                font-size: 2.4rem
+                color: $main-color
+                margin-bottom: 2rem
+            p 
+                font-size: 1.8rem
+                color: #666666 
+                line-height: 1.4
+                margin-bottom: 3rem
+        &:nth-child(even)
+            flex-direction: row-reverse
+    @include respond(phone)
+        &__item
+            flex-wrap: wrap
+            margin-bottom: 2rem
+            .item-img 
+                max-width: 100%
+            .item-content 
+                max-width: 100%
+                padding: 3rem 2rem
+
+        

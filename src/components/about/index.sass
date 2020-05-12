@@ -1,0 +1,699 @@
+.about-nav,.navigation-bar
+    &.is-fixed 
+        position: fixed
+        top: 0
+        width: 100%
+        background: #ffffff
+        z-index: 99
+    &.animate-children
+        box-shadow: 0 1px 2px rgba(#000, .2)
+    &__list 
+        padding: 1.5rem
+        border-bottom: 1px solid #a9a9a9
+        justify-content: center
+        list-style: none 
+        display: flex
+        overflow-x: auto
+        white-space: nowrap
+        @include respond(tab-land)
+            justify-content: flex-start
+    &__item 
+        margin: 0 1.5rem
+        &:not(:last-child)
+            position: relative
+            &:after 
+                content: "|"
+                position: absolute 
+                top: 0
+                right: -1.5rem
+                color: #a9a9a9 
+        a 
+            &:hover,&.active 
+                color: $main-color 
+                transform: .2s ease
+                &:after 
+                    transform: scale(1)
+    &__link 
+        color: #666666
+        position: relative
+        padding: 1.4rem 0
+        &:after
+            position: absolute 
+            content: ''
+            bottom: -3px
+            left: 0 
+            width: 100%
+            height: 2px 
+            background: $main-color
+            transform: scale(0)
+            transition: .2s ease
+    .about-nav-trigger 
+        display: none 
+    @include respond(tab-port)
+        box-shadow: none
+        .about-nav-trigger 
+            position: fixed
+            top: 78px
+            left: 2rem
+            padding: 2rem 1rem
+            text-transform: uppercase
+            color: #ffffff
+            font-weight: bold
+            background: rgba(0,0,0,0.9)
+            border-radius: 3px
+            z-index: 11
+            display: flex 
+            align-items: center 
+            justify-content: center
+            .icon
+                margin-left: auto
+                position: relative
+                width: 25px
+                height: 2px
+                background: #ffffff
+                display: block 
+                transition: all .3s ease-in-out
+                &:before 
+                    content: ''
+                    position: absolute
+                    width: 25px
+                    height: 2px
+                    background: #ffffff
+                    top: 6px
+                    right: 0
+                    transition: all .3s ease-in-out
+                &:after
+                    content: ''
+                    position: absolute
+                    width: 25px
+                    height: 2px
+                    bottom: 6px
+                    right: 0
+                    background: #ffffff
+                    transition: all .3s ease-in-out
+            &.menu-is-open
+                .icon
+                    &:before
+                        width: 15px
+                        -webkit-transform: translateX(-11px) rotate(45deg)
+                        -ms-transform: translateX(-11px) rotate(45deg)
+                        -o-transform: translateX(-11px) rotate(45deg)
+                        transform: translateX(-11px) rotate(45deg)
+                    &:after
+                        width: 15px
+                        -webkit-transform: translateX(-11px) rotate(-45deg)
+                        -ms-transform: translateX(-11px) rotate(-45deg)
+                        -o-transform: translateX(-11px) rotate(-45deg)
+                        transform: translateX(-11px) rotate(-45deg)
+                    
+        &__list 
+            background: rgba(0,0,0,0.9)
+            position: fixed
+            top: 78px
+            left: 2rem
+            text-align: center
+            padding: 0
+            border-bottom:  0
+            transform: scale(0)
+            visibility: hidden
+            backface-visibility: hidden
+            transform-origin: top left
+            transition: all 0.3s
+            z-index: 10
+            width: 90%
+            max-width: 400px
+            &.is-visible 
+                display: block
+                visibility: visible 
+                backface-visibility: visible 
+                transform: scale(1)
+                padding: 2rem 0
+                li 
+                    &:after 
+                        display: none
+                    a 
+                        color: #ffffff
+                        display: block
+                        &:hover,&.active 
+                            color: $main-color
+                            &:after 
+                                display: none
+        
+@media (max-width: 1200px)
+    .about-nav
+        &__list
+            justify-content: flex-start
+
+.about 
+    .about-section 
+        padding: 6rem 0
+        background-image: url('/Data/Sites/1/media/img/about-7.png')
+        background-position: center center 
+        background-repeat: no-repeat 
+        background-size: cover
+        h2 
+            color: #333333
+            position: relative
+            text-align: center
+            &:after 
+                @include after 
+                width: 10rem 
+                left: 50%
+                transform: translateX(-50%)
+        .list-item 
+            display: flex 
+            justify-content: space-between
+            padding: 0 18rem 3rem
+            border-bottom: 1px solid #a9a9a9
+           
+            @include respond(phone)
+                flex-direction: column
+                align-items: center
+                .item:not(:last-child)
+                    margin-bottom: 2rem
+            @media (max-width: 1200px)
+                padding: 0 1.5rem 3rem
+            .item 
+                text-align: center
+                max-width: 24rem
+                span 
+                    padding: 0 1rem
+                .number 
+                    font-size: 3rem
+                    color: $main-color
+                    font-weight: 600
+                    line-height: 1.4
+                    span 
+                        font-size: 4rem
+                p 
+                    font-size: 1.8rem
+                    color: #333333
+                    font-weight: bold
+                    line-height: 1.4
+        .content 
+            display: flex
+            @include mr
+            align-items: stretch
+            padding-top: 3rem
+            &__img 
+                width: 50% 
+                @include pd 
+                img 
+                    width: 100%
+            &__text 
+                width: 50% 
+                @include pd 
+                text-align: justify 
+                p 
+                    font-size: 1.8rem 
+                    color: #333333 
+                    line-height: 1.4
+                    &:not(:last-child)
+                        margin-bottom: 2.5rem
+            @include respond(tab-port)
+                flex-wrap: wrap
+                &__img,&__text 
+                    width: 100%
+                &__img 
+                    margin-bottom: 2rem
+    .tamnhin-section 
+        padding: 9rem 0
+        background-image: url('/Data/Sites/1/media/img/home-bg-7.png')
+        background-attachment: fixed
+        background-repeat: no-repeat
+        background-size: cover
+        .content
+            max-width: 50%
+            @include respond(tab-land)
+                max-width: 100%
+            h2 
+                position: relative
+                &:after 
+                    @include after 
+                    width: 10rem 
+                    left: 0
+            p 
+                font-size: 1.8rem
+                color: $text-color
+                line-height: 1.4
+                margin-bottom: 5rem
+    .giatri-section
+        .content
+            display: flex
+            align-items: stretch
+            padding-top: 3rem
+            h2 
+                position: relative
+                color: #333333
+                &:after 
+                    @include after 
+                    width: 10rem 
+                    left: 0
+            &__img 
+                width: 50% 
+                img 
+                    width: 100%
+            &__text 
+                width: 50% 
+                text-align: justify 
+                background-image: url('/Data/Sites/1/media/img/about-3.png')
+                background-repeat: no-repeat
+                background-size: cover
+                padding: 5rem
+                .item 
+                    display: flex 
+                    align-items: center
+                    span 
+                        margin-left: 1rem 
+                        color: #333333
+                        font-size: 2rem
+                        text-transform: uppercase
+                        font-weight: bold
+                    .icon 
+                        width: 8rem
+                        height: 8rem 
+                        border-radius: 50%
+                        background: $main-color 
+                        display: flex 
+                        justify-content: center 
+                        align-items: center
+                    &:not(:last-child)
+                        margin-bottom: 2.5rem
+            @include respond(tab-land)
+                flex-wrap: wrap
+                &__img,&__text 
+                    width: 100%
+                &__img 
+                    margin-bottom: 2rem
+    .history-section  
+        padding: 5rem 0 8rem
+        background: #f3f3f3
+        h2 
+            position: relative
+            text-align: center
+            color: #333333
+            &:after 
+                @include after 
+                width: 10rem 
+                left: 50%
+                transform: translateX(-50%)
+        .swiper-container 
+            .swiper-wrapper 
+                .swiper-slide
+                    .content 
+                        display: flex
+                        align-items: stretch
+                        padding-top: 3rem
+                        width: 100%
+                        &__img 
+                            width: 50% 
+                            img 
+                                width: 100%
+                                height: 100%
+                                object-fit: cover
+                        &__text 
+                            width: 50% 
+                            text-align: justify 
+                            background: #ffffff
+                            padding: 5rem
+                            .title 
+                                background: $main-color
+                                color: $text-color 
+                                font-size: 2.2rem
+                                padding: 1rem 3rem
+                                display: inline-block
+                                margin-bottom: 2.5rem
+                                font-weight: bold
+                            .list-item 
+                                list-style: none 
+                                li 
+                                    position: relative
+                                    font-size: 1.8rem 
+                                    color: #333333 
+                                    line-height: 1.6
+                                    padding-left: 3rem
+                                    &:not(:last-child)
+                                        margin-bottom: 2.5rem
+                                    &:before
+                                        content: "\f142"
+                                        display: inline-block
+                                        font: normal normal normal 24px/1 Material Design Icons
+                                        position: absolute 
+                                        top: 3px
+                                        color: $main-color
+                                        left: 0 
+                        @include respond(tab-port)
+                            flex-wrap: wrap
+                            &__img,&__text 
+                                width: 100%
+                            &__img 
+                                margin-bottom: 2rem
+                            &__text 
+                                padding: 3rem
+                .swiper-slide-active
+    .thumbs-wrapper 
+        position: relative
+        .swiper-wrapper 
+            padding-top: 1.5rem
+            padding: 5rem 0!important
+        .swiper-slide
+            position: relative
+            border-top: 2px solid #b6b6b6
+            &:after 
+                content: '' 
+                width: 15px
+                height: 15px
+                background: #b6b6b6
+                position: absolute 
+                top: -7.5px
+                left: 50%
+                transform: translate(-50%)
+                border-radius: 50%
+            .title 
+                position: absolute
+                top: 2rem 
+                left: 50%
+                transform: translateX(-50%)
+                font-size: 2.2rem
+                font-weight: bold
+                color: #b6b6b6
+        .swiper-slide-thumb-active
+            &:after 
+                background: $main-color 
+            .title 
+                color: $main-color
+        .swiper-btn-next
+            position: absolute
+            top: 0
+            right: 0
+            font-size: 1.8rem
+            z-index: 99
+            outline: none
+            em 
+                &:before 
+                    font-weight: 600
+        .swiper-btn-prev
+            position: absolute
+            top: 0
+            right: 3rem
+            font-size: 1.8rem
+            z-index: 99
+            outline: none
+            em 
+                &:before 
+                    font-weight: 600
+    .maps-section 
+        padding: 5rem 0 8rem
+        .box-img 
+            display: block
+            img 
+                width: 100%
+    .leadership-section 
+        padding: 5rem 0
+        background: #f3f3f3
+        background: url('/Data/Sites/1/media/img/about-8.png')
+        background-repeat: no-repeat 
+        background-size: cover
+        @include respond(tab-port)
+            .nav-sub 
+                justify-content: center
+        h2 
+            position: relative
+            text-align: center
+            color: #333333
+            &:after 
+                @include after 
+                width: 10rem 
+                left: 50%
+                transform: translateX(-50%)
+        .tab-content 
+            &.active 
+                display: block!important
+        .list-item 
+            max-width: 50% 
+            margin-left: auto 
+            margin-right: auto
+            display: flex
+            flex-wrap: wrap
+            @media (max-width: 1200px)
+                max-width: 100%
+            .item 
+                figure
+                    max-width: 27rem
+                    .box-img 
+                        margin-bottom: 1.5rem
+                    figcaption 
+                        .subtitle 
+                            font-size: 1.6rem
+                            color: #333333
+                            line-height: 1.8
+
+                        .title 
+                            font-size: 1.8rem
+                            color: #333333
+                            text-transform: uppercase
+                            font-weight: bold
+                            line-height: 1.8
+                &:first-child
+                    max-width: 100%!important
+                    width: 100%
+                    display: flex 
+                    justify-content: center
+                    margin-bottom: 3.5rem
+                    figure 
+                        max-width: 27rem
+                &:nth-child(2),&:nth-child(3)
+                    width: 50%
+                &:nth-child(3)
+                    display: flex 
+                    justify-content: flex-end
+    .policy-section 
+        position: relative
+        padding: 10rem 0 7rem
+        .bg
+            position: absolute 
+            top: 0 
+            left: 0 
+            width: 100%
+            height: 38rem
+            img 
+                height: 100%
+                width: 100%
+                object-fit: cover
+        .main-title 
+            position: relative
+            text-align: center
+            color: #ffffff
+            margin-bottom: 12rem
+            &:after 
+                @include after 
+                width: 10rem 
+                left: 50%
+                transform: translateX(-50%)
+        .accordions 
+            list-style: none
+            position: relative
+            z-index: 9
+            .accordion-item 
+                background: #f3f3f3
+                margin-bottom: 2rem
+                &.active
+                    background: $main-color
+                    .accordion-title 
+                        color: $text-color
+                        &:after
+                            display: block
+                        .icon 
+                            &:before 
+                                content: url(/Data/Sites/1/media/img/ac-mius.png)
+                    .accordion-content 
+                        .content 
+                            display: flex
+                            @include respond(phone)
+                                padding: 2.5rem 2.5rem
+                                flex-direction: column
+                                p 
+                                    margin-left: 0 
+                                    padding-top: 2rem
+                                    
+                .accordion-title 
+                    font-weight: 600
+                    width: 100%
+                    color: #666666
+                    line-height: 1.556
+                    font-size: 1.8rem
+                    position: relative
+                    display: flex
+                    justify-content: space-between
+                    padding: 1.5rem 3rem
+                    &:after 
+                        display: none
+                        content: ''
+                        position: absolute 
+                        left: 50%
+                        transform: translateX(-50%) 
+                        bottom: 0 
+                        width: calc(100% - 6rem)
+                        height: 1px
+                        background: $text-color
+                    .icon
+                        position: relative
+                        width: 2.5rem
+                        height: 2.5rem
+                        &:before 
+                            content: url(/Data/Sites/1/media/img/ac-plus.png)
+                            position: absolute 
+                            top: 0 
+                            background-size: 2.5rem 2.5rem
+                            right: 0
+                            @include respond(tab-port)
+                                transform: scale(.7)
+                                top: -.7rem 
+                                right: -.7rem
+                    &.active
+                        color: $text-color
+                        background: $main-color
+                        padding-bottom: 2rem
+                        &:after 
+                            display: block
+                        .icon 
+                            &:before 
+                                content: url(/Data/Sites/1/media/img/ac-mius.png)
+                .accordion-content 
+                    display: none
+                    text-align: justify
+                    .content
+                        display: none
+                        padding: 2.5rem 7.5rem
+                        p 
+                            font-size: 1.8rem
+                            color: $text-color
+                            line-height: 1.556
+                            margin-left: 3rem
+                        .img 
+                            width: 100%
+                            img 
+                                width: 100%
+    .customer-section 
+        padding: 5rem 0
+        background: #e8f3f9
+        h2 
+            position: relative
+            text-align: center
+            color: #333333
+            &:after 
+                @include after 
+                width: 10rem 
+                left: 50%
+                transform: translateX(-50%)
+        .noidung
+            &.active 
+                display: block!important
+        .nav-sub 
+            li 
+                a 
+                    width: 30rem
+        .slider 
+            position: relative
+            .swiper-nav 
+                width: calc(100% + 12rem)
+                @include respond(tab-land)
+                    width: 100%
+                @include respond(tab-port)
+                    display: none
+                .button-prev,.button-next 
+                    width: 3.5rem
+                    height: 3.5rem
+                    background: $text-color
+                    border: 1px solid #d7d7d7
+                    em 
+                        font-size: 2.4rem
+                        color: #333
+            .swiper-wrapper 
+                .swiper-slide 
+                    border: 1px solid #d7d7d7
+                    &:not(:last-child)
+                        border-right: none!important
+                    padding: 0
+                    .box-img
+                        width: 100%
+                        height: 12rem
+                        background: #ffffff
+                        display: block
+                        overflow: hidden
+                        img
+                            width: 100%
+                            height: 100%
+                            object-fit: scale-down
+    .last-section 
+        padding: 8rem 0
+        .content 
+            display: flex
+            align-items: stretch
+            width: 100%
+            &__img 
+                width: 41.66%
+                display: flex 
+                justify-content: center
+                padding-bottom: 3rem
+                .box-img
+                    max-width: 26rem
+                    padding: 2rem
+                    border: 1px solid #d7d7d7
+                    background: #f3f3f3
+                    position: relative
+                    &:after
+                        content: url('/Data/Sites/1/media/img/shape.png')
+                        position: absolute 
+                        left: 50% 
+                        bottom: -6rem
+                        transform: translateX(-50%)
+                        // margin-left: -150px 
+                        // border-radius: 50% 
+                        // width: 300px
+                        // height: 30px
+                        // box-shadow: 0 60px 20px rgba(0,0,0,0.15)
+                    img 
+                        width: 100%
+                        border: 1px solid #d7d7d7
+                        
+            &__text 
+                width: 58.33%
+                text-align: justify 
+                background: #ffffff
+                h2 
+                    position: relative
+                    text-align: left
+                    color: #333333
+                    &:after 
+                        @include after 
+                        width: 10rem 
+                        left: 0
+                .list-item 
+                    list-style: none 
+                    li 
+                        position: relative
+                        font-size: 1.8rem 
+                        color: #333333 
+                        line-height: 1.6
+                        padding-left: 3rem
+                        &:not(:last-child)
+                            margin-bottom: 2.5rem
+                        &:before
+                            content: "\f142"
+                            display: inline-block
+                            font: normal normal normal 24px/1 Material Design Icons
+                            position: absolute 
+                            top: 3px
+                            color: $main-color
+                            left: 0 
+            @include respond(tab-port)
+                flex-wrap: wrap
+                &__img,&__text 
+                    width: 100%
+                &__img 
+                    margin-bottom: 2rem
+                &__text 
+                    padding: 3rem
+
+    
